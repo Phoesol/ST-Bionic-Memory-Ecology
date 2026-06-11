@@ -70,15 +70,17 @@ function renderExtensionsMenuEntry(menuItem) {
 function renderExtensionsSettingsEntry(container) {
   container.className = "extension_container bme-extension-settings-entry";
   container.innerHTML = `
-    <div class="bme-extension-settings-entry__head bme-extension-settings-entry__head--single">
-      <div class="bme-extension-settings-entry__title">
-        <i class="fa-solid fa-brain"></i>
-        <span>${t("panel.entry.menuLabel")}</span>
+    <div class="inline-drawer">
+      <div class="inline-drawer-toggle inline-drawer-header">
+        <b><i class="fa-solid fa-brain"></i> <span>${t("panel.entry.menuLabel")}</span></b>
+        <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
       </div>
-      <button class="bme-extension-settings-entry__open" type="button">
-        <i class="fa-solid fa-up-right-from-square"></i>
-        <span>${t("panel.entry.openConsoleAction")}</span>
-      </button>
+      <div class="inline-drawer-content">
+        <button class="bme-extension-settings-entry__open menu_button" type="button">
+          <i class="fa-solid fa-up-right-from-square"></i>
+          <span>${t("panel.entry.openConsoleAction")}</span>
+        </button>
+      </div>
     </div>
   `;
 }
